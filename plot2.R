@@ -9,5 +9,5 @@ data[,"Date"]<-as.Date(data[,"Date"],format="%d/%m/%Y")
 data$DateTime<-strptime(paste(data[,"Date"],data[,"Time"],sep=" "), format="%Y-%m-%d %H:%M:%S")
 
 png(filename = "plot2.png",width = 480, height = 480, units = "px", pointsize = 12,bg = "white")
-plot(data$DateTime2,data$Global_active_power,type="l")
+plot(data$DateTime,data$Global_active_power,type="l")
 dev.off()
